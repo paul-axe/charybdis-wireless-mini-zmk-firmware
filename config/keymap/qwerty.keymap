@@ -37,11 +37,11 @@
         BASE {
             bindings = <
 // ╭───────────────┬────────────────┬────────────────┬─────────────────┬─────────────────┬──────╮  ╭──────┬──────────────────┬──────────────────┬─────────────────┬────────────────────────┬─────────────╮
-    &kp C_AC_SEARCH &kp Q            &kp W            &kp E             &kp R             &kp T     &kp Y  &kp U              &kp I              &kp O             &kp P                     &td_layers
+    &kp GRAVE       &kp Q            &kp W            &kp E             &kp R             &kp T     &kp Y  &kp U              &kp I              &kp O             &kp P                     &kp LBKT
 // ├───────────────┼────────────────┼────────────────┼─────────────────┼─────────────────┼──────┤  ├──────┼──────────────────┼──────────────────┼─────────────────┼────────────────────────┼─────────────┤
-    &kp TAB         &ht_left LCMD A  &ht_left LALT S  &ht_left LSHFT D  &ht_left LCTRL F  &kp G     &kp H  &ht_right RCTRL J  &ht_right RSHFT K  &ht_right LALT L  &ht_right RCMD SEMICOLON  &kp DEL
+    &kp TAB         &ht_left LCMD A  &ht_left LALT S  &ht_left LCTRL D  &ht_left LSHFT F  &kp G     &kp H  &ht_right RSHFT J  &ht_right RCTRL K  &ht_right LALT L  &ht_right RCMD SEMICOLON  &kp APOS
 // ├───────────────┼────────────────┼────────────────┼─────────────────┼─────────────────┼──────┤  ├──────┼──────────────────┼──────────────────┼─────────────────┼────────────────────────┼─────────────┤
-    &clip_hist      &kp Z            &kp X            &kp C             &kp V             &kp B     &kp N  &kp M              &mm_cm_sc          &mm_pr_col        &mm_qm_ex                 &kp KP_SLASH
+    &kp LSHFT       &kp Z            &kp X            &kp C             &kp V             &kp B     &kp N  &kp M              &kp COMMA          &kp PERIOD        &kp SLASH                 &kp RSHFT
 // ╰───────────────┴────────────────┴────────────────┼─────────────────┼─────────────────┼──────┤  ├──────┼──────────────────┼──────────────────┴─────────────────┴────────────────────────┴─────────────╯
                                                              &td_esc_scrl_slow   &td_clk  &td_bs     &kp ENTER  &td_space_nav
                                                          // ╰──────────────────┴─────────┴──────╯  ╰──────────┴──────────────╯
@@ -50,27 +50,31 @@
 
         NUM {
             bindings = <
-&none   &none  &none  &none  &none          &none            &kp PLUS      &ht_num_func F7 N7  &ht_num_func F8 N8  &ht_num_func F9 N9  &ht_num_func F10 PRCNT  &none
-&trans   &none  &none  &none  &kp BACKSPACE  &none            &kp KP_MINUS &ht_num_func F4 N4  &ht_num_func F5 N5  &ht_num_func F6 N6  &ht_num_func F11 ASTRK  &none
-&none    &none  &none  &none  &none          &none            &kp EQUAL    &ht_num_func F1 N1  &ht_num_func F2 N2  &ht_num_func F3 N3  &ht_num_func F12 DOT    &kp KP_SLASH
-                       &none  &none          &trans           &kp N0     &kp SPACE
+// ╭───────────────┬────────────────┬────────────────┬─────────────────┬─────────────────┬──────╮  ╭──────┬──────────────────┬──────────────────┬─────────────────┬────────────────────────┬─────────────╮
+    &none           &none            &none            &none             &none             &none     &kp PLUS     &ht_num_func F7 N7  &ht_num_func F8 N8  &ht_num_func F9 N9  &ht_num_func F10 PRCNT  &none
+    &trans          &kp LCMD         &kp LALT         &kp LCTRL         &kp LSHFT         &none     &kp KP_MINUS &ht_num_func F4 N4  &ht_num_func F5 N5  &ht_num_func F6 N6  &ht_num_func F11 ASTRK  &none
+    &none           &none            &none            &none             &none             &none     &kp EQUAL    &ht_num_func F1 N1  &ht_num_func F2 N2  &ht_num_func F3 N3  &ht_num_func F12 DOT    &kp KP_SLASH
+                                                                   &none  &none          &trans           &kp N0     &kp SPACE
             >;
         };
 
         NAV {
             bindings = <
-&none    &msc MOVE_LEFT  &msc MOVE_UP    &none        &msc MOVE_DOWN  &msc MOVE_RIGHT     &detach_session  &create_or_attach  &next_pane   &show_sessions  &sync_panes       &none
-&kp TAB  &mkp MB4        &kp LALT        &kp LSHFT    &kp LCTRL       &mkp MB5            &h_split         &kp LEFT_ARROW     &kp DOWN     &kp UP          &kp RIGHT_ARROW   &none
-&none    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP &mmv MOVE_RIGHT &none               &v_split         &kp HOME           &kp PG_DN    &kp PG_UP       &kp END           &none
+// ╭───────────────┬────────────────┬────────────────┬─────────────────┬─────────────────┬──────╮  ╭──────┬──────────────────┬──────────────────┬─────────────────┬────────────────────────┬─────────────╮
+&none    &none           &none           &none        &none           &none               &kp HOME           &kp PG_DN    &kp PG_UP       &kp END           &sync_panes     &none
+&none    &kp LCMD        &kp LALT        &kp LCTRL    &kp LSHFT       &mkp MB5            &kp LEFT_ARROW     &kp DOWN     &kp UP          &kp RIGHT_ARROW   &none           &none
+&none    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP &mmv MOVE_RIGHT &none               &v_split           &kp HOME     &kp PG_DN       &kp PG_UP         &kp END         &none
                                                       &none   &none   &none               &none   &trans
             >;
         };
 
         SYM {
             bindings = <
-&none      &none     &none     &kp CARET &kp TILDE       &none         &kp PLUS     &kp AMPS  &kp LBKT  &kp RBKT  &kp PRCNT  &kp BSLH
-&none      &none     &kp LPAR  &kp RPAR  &kp BACKSPACE   &kp UNDER     &kp KP_MINUS &kp GRAVE &kp LBRC  &kp RBRC  &kp ASTRK  &kp PIPE
-&none      &none     &none     &kp HASH  &home_dir       &kp DLLR      &kp EQUAL    &code_blk &kp LT    &kp GT    &kp AT     &kp KP_SLASH
+// ╭───────────────┬────────────────┬────────────────┬─────────────────┬─────────────────┬──────╮  ╭──────┬──────────────────┬──────────────────┬─────────────────┬────────────────────────┬─────────────╮
+
+    &none           &none            &none            &kp CARET &kp TILDE       &none         &kp PLUS     &kp AMPS  &kp LBKT  &kp RBKT  &kp PRCNT  &kp BSLH
+    &none           &kp LCMD         &kp LALT         &kp LCTRL    &kp LSHFT       &none &kp KP_MINUS &kp UNDER &kp LBRC  &kp RBRC  &kp ASTRK  &kp PIPE
+    &none           &none            &none            &kp HASH  &home_dir       &kp DLLR      &kp EQUAL    &code_blk &kp LT    &kp GT    &kp AT     &kp KP_SLASH
                                        &none  &trans     &trans         &trans   &trans
             >;
         };
