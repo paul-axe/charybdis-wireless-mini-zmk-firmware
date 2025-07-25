@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: qwerty}
 layers:
   BASE:
-  - SEARCH
+  - '`'
   - Q
   - W
   - E
@@ -12,20 +12,20 @@ layers:
   - I
   - O
   - P
-  - L_BASE L_GAME
+  - '['
   - TAB
   - {t: A, h: LCMD}
   - {t: S, h: LALT}
-  - {t: D, h: LSHFT}
-  - {t: F, h: LCTRL}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LSHFT}
   - G
   - H
-  - {t: J, h: RCTRL}
-  - {t: K, h: RSHFT}
+  - {t: J, h: RSHFT}
+  - {t: K, h: RCTRL}
   - {t: L, h: LALT}
   - {t: ;, h: RCMD}
-  - DEL
-  - CLIP HIST
+  - ''''
+  - LSHFT
   - Z
   - X
   - C
@@ -33,10 +33,10 @@ layers:
   - B
   - N
   - M
-  - {t: ',', s: ;}
-  - {t: ., s: ':'}
-  - {t: '?', s: '!'}
+  - ','
+  - .
   - /
+  - RSHFT
   - ESC SCRL SLOW
   - SYM LCLK
   - BS NUM
@@ -56,10 +56,10 @@ layers:
   - {t: '%', h: F10}
   - ''
   - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - BACK SPACE
+  - LCMD
+  - LALT
+  - LCTRL
+  - LSHFT
   - ''
   - '-'
   - {t: '4', h: F4}
@@ -86,28 +86,28 @@ layers:
   - SPACE
   NAV:
   - ''
-  - WHEEL L
-  - WHEEL D
   - ''
-  - WHEEL U
-  - WHEEL R
-  - TMUX DETCH
-  - TMUX ATTCH
-  - TMUX NEXT
-  - TMUX SESH
+  - ''
+  - ''
+  - ''
+  - ''
+  - HOME
+  - PG DN
+  - PG UP
+  - END
   - TMUX SYNC
   - ''
-  - TAB
-  - BACK
+  - ''
+  - LCMD
   - LALT
-  - LSHFT
   - LCTRL
-  - FWD
-  - HSPLIT
+  - LSHFT
+  - ''
   - LEFT
   - DOWN
   - UP
   - RIGHT
+  - ''
   - ''
   - ''
   - MOVE L
@@ -140,13 +140,13 @@ layers:
   - '%'
   - \
   - ''
+  - LCMD
+  - LALT
+  - LCTRL
+  - LSHFT
   - ''
-  - (
-  - )
-  - BACK SPACE
-  - _
   - '-'
-  - '`'
+  - _
   - '{'
   - '}'
   - '*'
@@ -159,8 +159,8 @@ layers:
   - $
   - '='
   - '```'
-  - <
-  - '>'
+  - (
+  - )
   - '@'
   - /
   - ''
