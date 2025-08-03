@@ -54,7 +54,7 @@ layers:
   - {t: '8', h: F8}
   - {t: '9', h: F9}
   - {t: '%', h: F10}
-  - ''
+  - DELETE
   - {t: ▽, type: trans}
   - LCMD
   - LALT
@@ -95,7 +95,7 @@ layers:
   - PG DN
   - PG UP
   - END
-  - TMUX SYNC
+  - ''
   - ''
   - ''
   - LCMD
@@ -110,16 +110,16 @@ layers:
   - ''
   - ''
   - ''
-  - MOVE L
-  - MOVE D
-  - MOVE UP
-  - MOVE R
   - ''
-  - VSPLIT
-  - HOME
-  - PG DN
-  - PG UP
-  - END
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - ''
@@ -149,8 +149,8 @@ layers:
   - $
   - '%'
   - ^
-  - ']'
   - '['
+  - ']'
   - ''
   - ''
   - ''
@@ -168,53 +168,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  GAME:
-  - '1'
-  - TAB
-  - Q
-  - W
-  - E
-  - R
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - '2'
-  - LCTRL
-  - A
-  - S
-  - D
-  - F
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '3'
-  - LSHFT
-  - Y
-  - X
-  - C
-  - V
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - SPACE
-  - LEFT ALT
-  - ''
-  - ''
   EXTRAS:
   - ZMK Studio
-  - SHRUG
-  - LGTM
-  - GIT COMMIT
+  - ''
+  - ''
+  - ''
   - ''
   - BRIGHT ▲
   - {t: BT, h: '0'}
@@ -224,7 +182,7 @@ layers:
   - OUT TOG
   - BT CLR
   - SLEEP
-  - sudo!!
+  - ''
   - ''
   - ''
   - ''
@@ -235,13 +193,13 @@ layers:
   - STOP
   - NEXT
   - ''
-  - LOCK
+  - ''
   - UNDO
   - CUT
   - COPY
   - PASTE
   - ''
-  - NEW DIR
+  - ''
   - MUTE
   - VOLUME DOWN
   - VOLUME UP
