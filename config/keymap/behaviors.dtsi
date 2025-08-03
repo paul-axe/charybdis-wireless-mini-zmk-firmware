@@ -1,6 +1,7 @@
 #define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 19 20 21 22  // Left-hand keys.
 #define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 16 15 14 13  // Right-hand keys.
 #define THUMBS 36 37 38 39 40  // Thumb keys.
+#include "layers.h"
 
 / {
     behaviors {
@@ -44,14 +45,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&lt 7 ESC>, <&mo 6>; // hold, tap, double_tap
+            bindings = <&lt SCROLL ESC>, <&mo SLOW>; // hold, tap, double_tap
         };
 
         td_space_nav: td_space {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <120>;
-            bindings = <&lt 2 SPACE>, <&kp SPACE>; // hold, tap, double_tap
+            bindings = <&lt NAV SPACE>, <&kp SPACE>; // hold, tap, double_tap
         };
 
         mo_clk: mo_click {
@@ -67,7 +68,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <170>;
-            bindings = <&mo_clk 3 LCLK>, <&mkp LCLK>; // hold, tap, double_tap
+            bindings = <&mo_clk SYM LCLK>, <&mkp LCLK>; // hold, tap, double_tap
         };
 
         mo_kp: mo_kp {
@@ -83,7 +84,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <170>;
-            bindings = <&mo_kp 1 BACKSPACE>, <&kp BACKSPACE>; // hold, tap, double_tap
+            bindings = <&mo_kp NUM BACKSPACE>, <&kp BACKSPACE>; // hold, tap, double_tap
         };
 
         httl: ht_two_layers {
@@ -94,44 +95,10 @@
             tapping-term-ms = <125>;
         };
 
-        td_layers: td_layer_swap {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&to 0>, <&to 4>; // tap, double_tap
-        };
-
-        td_clk_scrl: td_click_or_scroll {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&mkp RCLK>, <&mo 8>;  // tap/hold, double_tap
-        };
-
         td_bore: BASE_or_EXTRA {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&mo 5>, <&to 0>;
-        };
-
-        mm_qm_ex: question_exclamation {
-            compatible    = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings      = <&kp QUESTION>, <&kp EXCLAMATION>;
-            mods          = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        mm_pr_col: period_colon {
-            compatible    = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings      = <&kp PERIOD>, <&kp COLON>;
-            mods          = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        mm_cm_sc: comma_semi_colon {
-            compatible    = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings      = <&kp COMMA>, <&kp SEMICOLON>;
-            mods          = <(MOD_LSFT | MOD_RSFT)>;
+            bindings = <&mo EXTRAS>, <&to BASE>;
         };
     };
 };
