@@ -1,7 +1,8 @@
 #define LA_BASE    0
 #define LA_NUM     1
-#define LA_NAV     2
-#define LA_SYM     3
-#define LA_EXTRAS  4
-#define LA_SLOW    5
-#define LA_SCROLL  6
+#define LA_FUN     2
+#define LA_NAV     3
+#define LA_SYM     4
+#define LA_EXTRAS  5
+#define LA_SLOW    6
+#define LA_SCROLL  7

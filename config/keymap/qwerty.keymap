@@ -38,9 +38,9 @@
 // ├───────────────┼────────────────┼────────────────┼─────────────────┼─────────────────┼──────┤  ├──────┼──────────────────┼──────────────────┼─────────────────┼────────────────────────┼─────────────┤
     &kp TAB         &ht_left LCMD A  &ht_left LALT S  &ht_left LCTRL D  &ht_left LSHFT F  &kp G     &kp H  &ht_right RSHFT J  &ht_right RCTRL K  &ht_right LALT L  &ht_right RCMD SEMICOLON  &kp APOS
 // ├───────────────┼────────────────┼────────────────┼─────────────────┼─────────────────┼──────┤  ├──────┼──────────────────┼──────────────────┼─────────────────┼────────────────────────┼─────────────┤
-    &kp LSHFT       &kp Z            &kp X            &kp C             &kp V             &kp B     &kp N  &kp M              &kp COMMA          &kp PERIOD        &kp SLASH                 &kp RSHFT
+    &kp LSHFT       &td_scroll             &kp X            &kp C             &kp V             &kp B     &kp N  &kp M              &kp COMMA          &kp PERIOD        &kp SLASH                 &kp RSHFT
 // ╰───────────────┴────────────────┴────────────────┼─────────────────┼─────────────────┼──────┤  ├──────┼──────────────────┼──────────────────┴─────────────────┴────────────────────────┴─────────────╯
-                                                             &td_esc_scrl_slow   &td_clk  &td_bs     &kp ENTER  &td_space_nav
+                                                             &td_esc_scrl_slow   &td_clk  &td_bs   &td_ent_fun  &td_space_nav
                                                          // ╰──────────────────┴─────────┴──────╯  ╰──────────┴──────────────╯
             >;
         };
@@ -48,10 +48,19 @@
         NUM {
             bindings = <
 // ╭───────────────┬────────────────┬────────────────┬─────────────────┬─────────────────┬──────╮  ╭──────┬──────────────────┬──────────────────┬─────────────────┬────────────────────────┬─────────────╮
-    &none           &none            &none            &none             &none             &none     &kp PLUS     &ht_num_func F7 N7  &ht_num_func F8 N8  &ht_num_func F9 N9  &ht_num_func F10 PRCNT  &kp DELETE
-    &trans          &kp LCMD         &kp LALT         &kp LCTRL         &kp LSHFT         &none     &kp KP_MINUS &ht_num_func F4 N4  &ht_num_func F5 N5  &ht_num_func F6 N6  &ht_num_func F11 ASTRK  &none
-    &none           &none            &none            &none             &none             &none     &kp EQUAL    &ht_num_func F1 N1  &ht_num_func F2 N2  &ht_num_func F3 N3  &ht_num_func F12 DOT    &kp KP_SLASH
+    &none           &none            &none            &none             &none             &none     &kp PLUS     &kp N7  &kp N8  &kp N9  &kp 0  &kp DELETE
+    &trans          &kp LCMD         &kp LALT         &kp LCTRL         &kp LSHFT         &none     &kp KP_MINUS &kp N4  &kp N5  &kp N6  &kp ASTRK  &kp GRAVE
+    &none           &kp LC(A)            &none            &none             &none             &none     &kp EQUAL    &kp N1  &kp N2  &kp N3  &kp DOT    &kp KP_SLASH
                                                                    &none  &none          &trans           &kp N0     &kp SPACE
+            >;
+        };
+
+       FUN {
+            bindings = <
+    &none           &none            &none            &none             &none             &none     &none &kp F7  &kp F8  &kp F9  &kp F12  &none
+    &trans          &kp LCMD         &kp LALT         &kp LCTRL         &kp LSHFT         &none     &none &kp F4  &kp F5  &kp F6  &kp F11  &none
+    &none           &none            &none            &none             &none             &none     &none &kp F1  &kp F2  &kp F3  &kp F10  &none
+                                                                   &none  &none          &trans           &trans &trans
             >;
         };
 
@@ -87,7 +96,7 @@
         };
 
         SLOW {
-            bindings = <
+           bindings = <
 &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
 &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
 &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
