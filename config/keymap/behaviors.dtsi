@@ -65,7 +65,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <120>;
-            bindings = <&lt LA_NAV SPACE>, <&kp SPACE>; // hold, tap, double_tap
+            bindings = <&mo_kp LA_NAV SPACE>, <&kp SPACE>; // hold, tap, double_tap
         };
 
         mo_clk: mo_click {

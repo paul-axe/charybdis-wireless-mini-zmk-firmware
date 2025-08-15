@@ -49,7 +49,7 @@
             bindings = <
 // ╭───────────────┬────────────────┬────────────────┬─────────────────┬─────────────────┬──────╮  ╭──────┬──────────────────┬──────────────────┬─────────────────┬────────────────────────┬─────────────╮
     &none           &none            &none            &none             &none             &none     &kp PLUS     &kp N7  &kp N8  &kp N9  &kp 0  &kp DELETE
-    &trans          &kp LCMD         &kp LALT         &kp LCTRL         &kp LSHFT         &none     &kp KP_MINUS &kp N4  &kp N5  &kp N6  &kp ASTRK  &kp GRAVE
+    &trans          &kp LCMD         &kp LALT         &kp LCTRL         &kp LSHFT         &none     &kp MINUS    &kp N4  &kp N5  &kp N6  &kp ASTRK  &kp GRAVE
     &none           &kp LC(A)            &none            &none             &none             &none     &kp EQUAL    &kp N1  &kp N2  &kp N3  &kp DOT    &kp KP_SLASH
                                                                    &none  &none          &trans           &kp N0     &kp SPACE
             >;
@@ -79,8 +79,8 @@
 // ╭───────────────┬────────────────┬────────────────┬─────────────────┬─────────────────┬──────╮  ╭──────┬──────────────────┬──────────────────┬─────────────────┬────────────────────────┬─────────────╮
 
     &none           &none            &none            &none             &none             &none     &kp PLUS     &kp AMPS     &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSLH
-    &none           &kp LCMD         &kp LALT         &kp LCTRL         &kp LSHFT         &none     &kp KP_MINUS &kp DLLR     &kp PRCNT  &kp CARET  &kp LBKT  &kp RBKT
-    &none           &none            &none            &none             &none             &none     &kp EQUAL    &kp EXCLAMATION &kp AT   &kp HASH    &kp UNDER     &none
+    &none           &kp LCMD         &kp LALT         &kp LCTRL         &kp LSHFT         &none     &kp MINUS    &kp DLLR     &kp PRCNT  &kp CARET  &kp LBKT  &kp RBKT
+    &none           &kp LC(A)            &none            &none             &none             &none     &kp EQUAL    &kp EXCLAMATION &kp AT   &kp HASH    &kp UNDER     &none
                                                                        &none  &trans     &trans         &trans   &trans
             >;
         };
