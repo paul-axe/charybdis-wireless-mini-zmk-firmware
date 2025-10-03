@@ -1,9 +1,12 @@
+
+
 / {
     combos {
         compatible = "zmk,combos";
 
         CapsWord {
             bindings = <&caps_word>;
+
             key-positions = <17 18>;
             layers = <0>;
         };

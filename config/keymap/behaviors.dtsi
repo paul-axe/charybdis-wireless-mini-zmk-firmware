@@ -3,6 +3,10 @@
 #define THUMBS 36 37 38 39 40  // Thumb keys.
 #include "layers.dtsi"
 
+&caps_word {
+  continue-list = <UNDERSCORE MINUS LBKT RBKT>;
+};
+
 / {
     behaviors {
         ht_num_func: homerow_mod {
@@ -52,7 +56,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <120>;
-            bindings = <&lt LA_FUN ENTER>, <&kp ENTER>;
+            bindings = <&mo_kp LA_FUN ENTER>, <&kp ENTER>;
         };
         td_esc_scrl_slow: td_esc_scrl_slow {
             compatible = "zmk,behavior-tap-dance";
