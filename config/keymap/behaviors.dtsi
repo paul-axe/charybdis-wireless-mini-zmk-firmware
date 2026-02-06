@@ -46,11 +46,16 @@
         };
 
         td_scroll: td_scroll {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <120>;
-            bindings = <&lt LA_SCROLL Z>, <&kp Z>;
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
+            bindings = <&mo>, <&kp>;
         };
+
+
 
         td_ent_fun: td_ent_fun {
             compatible = "zmk,behavior-tap-dance";
